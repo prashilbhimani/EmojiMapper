@@ -1,0 +1,59 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(name='viewport', content='width=device-width, initial-scale=1, shrink-to-fit=no')
+    meta(name='description', content='')
+    meta(name='author', content='')
+    title Emoji Mapper
+    link(href='css/bootstrap.min.css', rel='stylesheet')
+    link(href='css/scrolling-nav.css', rel='stylesheet')
+    link(href='css/timeline.css', rel='stylesheet')
+  body#page-top
+    nav#mainNav.navbar.navbar-expand-lg.navbar-dark.bg-dark.fixed-top
+      .container
+        a.navbar-brand.js-scroll-trigger(href='#page-top') Emoji Mapper
+        button.navbar-toggler(type='button', data-toggle='collapse', data-target='#navbarResponsive', aria-controls='navbarResponsive', aria-expanded='false', aria-label='Toggle navigation')
+          span.navbar-toggler-icon
+        #navbarResponsive.collapse.navbar-collapse
+          ul.navbar-nav.ml-auto
+            li.nav-item
+              a.nav-link.js-scroll-trigger(href='#query') Query
+    header.bg-primary.text-white
+      .container.text-center
+        h1 Emoji Mapper
+        p.lead Emoji speak a hundred words 😜
+    section#query
+      .container.text-center
+        .h2 Search for Tweets
+      br
+      br
+      .container
+        .row.text-center
+          .col-lg-4.mx.auto
+          .col-lg-4.mx-auto
+            form(action="/results", method="GET")
+              .form-group
+                label(for='query') Query
+                input#query.form-control(name="search",type='text')
+              .form-group
+                label(for='date') Date
+                input#date.form-control(name="date",type='text')
+              button.btn.btn-primary(type='submit') Submit
+
+          .col-lg-4.mx.auto
+        
+
+    // Footer
+    footer.py-5.bg-dark
+      .container
+        p.m-0.text-center.text-white 
+      // /.container
+    // Bootstrap core JavaScript
+    script(src='vendor/jquery/jquery.min.js')
+    script(src='vendor/bootstrap/js/bootstrap.bundle.min.js')
+    // Plugin JavaScript
+    script(src='vendor/jquery-easing/jquery.easing.min.js')
+    // Custom JavaScript for this theme
+    script(src='js/scrolling-nav.js')
+    script(src="js/getdensity.js")
